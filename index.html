@@ -12,6 +12,11 @@
   </div>
   <p class="instruccion">Toca el osito para abrir</p>
 
+  <audio id="musica" autoplay loop>
+  <source src="audio/audio.mp3" type="audio/mpeg">
+  Tu navegador no soporta el audio.
+</audio>
+
   <script>
     function abrirInvitacion() {
       document.body.classList.add("fadeOut");
@@ -19,6 +24,20 @@
         window.location.href = "invitacion.html";
       }, 500); // esperar a que termine la transición
     }
+
+        const createStar = () => {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    document.body.appendChild(star);
+
+    setTimeout(() => {
+      star.remove();
+    }, 5000);
+  };
+
+  setInterval(createStar, 300);
   </script>
 </body>
 </html>
