@@ -7,27 +7,28 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="invitacion fadeIn">
-  <img src="img/invitacion.png" alt="Carta de invitación" class="imagen-invitacion"/>
+  <div class="contenedor-invitacion">
+    <img src="img/invitacion.png" alt="Carta de invitación" class="imagen-invitacion"/>
+  </div>
 
   <audio id="musica" autoplay loop>
-  <source src="audio/audio.mp3" type="audio/mpeg">
-  Tu navegador no soporta el audio.
-</audio>
+    <source src="audio/audio.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
-  const createStar = () => {
-    const star = document.createElement('div');
-    star.classList.add('star');
-    star.style.left = Math.random() * 100 + 'vw';
-    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-    document.body.appendChild(star);
+    const createStar = () => {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(star);
 
-    setTimeout(() => {
-      star.remove();
-    }, 5000);
-  };
+      setTimeout(() => {
+        star.remove();
+      }, 5000);
+    };
 
-  setInterval(createStar, 300);
-</script>
+    setInterval(createStar, 300);
+  </script>
 </body>
 </html>
