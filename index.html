@@ -17,6 +17,14 @@
 </audio>
 
   <script>
+  function abrirInvitacion() {
+    // Transición antes de redirigir (opcional)
+    document.body.classList.add('fadeOut');
+    setTimeout(() => {
+      window.location.href = "invitacion.html";
+    }, 500); // Espera a que termine la animación
+  }
+
     const createStar = () => {
       const star = document.createElement('div');
       star.classList.add('star');
