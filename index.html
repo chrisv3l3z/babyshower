@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación Baby Shower</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="portada">
+  <div class="contenedor-sobre" onclick="abrirInvitacion()">
+    <img src="img/sobre.png" alt="Sobre con osito" class="imagen-sobre"/>
+  </div>
+  <p class="instruccion">Toca el osito para abrir</p>
+
+  <script>
+    function abrirInvitacion() {
+      document.body.classList.add("fadeOut");
+      setTimeout(() => {
+        window.location.href = "invitacion.html";
+      }, 500); // esperar a que termine la transición
+    }
+  </script>
+</body>
+</html>
